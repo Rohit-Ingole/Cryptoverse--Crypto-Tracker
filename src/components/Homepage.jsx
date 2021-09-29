@@ -21,7 +21,10 @@ const Homepage = () => {
 			<Title level={2} className="heading">
 				Global Crypto Stats
 			</Title>
-			<Row gutter={[32, 32]}>
+			<Row
+				gutter={[32, 32]}
+				style={{ fontWeight: "600", letterSpacing: "1px" }}
+			>
 				<Col span={12}>
 					<Statistic
 						title="Total Cryptocurrencies"

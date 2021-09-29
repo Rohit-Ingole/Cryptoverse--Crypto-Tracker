@@ -16,7 +16,7 @@ const News = ({ simplified }) => {
 	const { data } = useGetCryptosQuery(100);
 	const [cryptoNews, setCryptoNews] = useState();
 
-	const newsCategory = "Cryptocurrency";
+	const [newsCategory, setNewsCategory] = useState("Cryptocurrency");
 	const count = simplified ? 6 : 12;
 
 	useEffect(async () => {
@@ -34,7 +34,7 @@ const News = ({ simplified }) => {
 				config
 			)
 			.then((res) => setCryptoNews(res.data));
-	}, []);
+	}, [newsCategory]);
 
 	if (!cryptoNews?.value) return <Loader />;
 
